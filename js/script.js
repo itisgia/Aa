@@ -9,13 +9,14 @@ var Memory = {
 	init: function() {
 		var boxes = Memory.boxes;
 		console.log(boxes);
-		for (var i = boxes.length - 1; i >= 0; i--) {
+
+		for (var i = 0; i < boxes.length; i++) {
 			boxes[i].className += ' unflipped incorrect';
 
 			boxes[i].addEventListener('click', function(){
 				Memory.clickFunction(this);
 			}, false);
-		};
+		}
 	},
 
 	clickFunction: function(element) {
@@ -57,10 +58,11 @@ var Memory = {
 	hideIncorrectBoxes: function() {
 
 		var clickedBoxes = document.querySelectorAll('.box.active.incorrect');
-		for (var i = clickedBoxes.length - 1; i >= 0; i--) {
+
+		for (var i = 0; i < clickedBoxes.length; i++) {
 			clickedBoxes[i].className = clickedBoxes[i].className.replace('active', 'unflipped');
 		}
-
+		
 		// Reset clicks
 		Memory.clicks = 0;
 	}
