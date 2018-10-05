@@ -75,3 +75,8 @@ main {
 	width: 132px;
 	height: 120px;
 }
+
+.box.unflipped:hover .back, .box.unflipped:hover .front {
+	background-color: #d0d3a0;
+	border-style: none;
+}
