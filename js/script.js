@@ -62,7 +62,7 @@ var Memory = {
 		for (var i = 0; i < clickedBoxes.length; i++) {
 			clickedBoxes[i].className = clickedBoxes[i].className.replace('active', 'unflipped');
 		}
-		
+
 		// Reset clicks
 		Memory.clicks = 0;
 	}
