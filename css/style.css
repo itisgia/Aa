@@ -142,7 +142,8 @@ footer {
     height: 120px; }
 
   footer .learn {
-    padding-top: 5%; }
+    padding-top: 15%;
+    padding: 40px; }
   footer li {
     display: inline-block; } }
 

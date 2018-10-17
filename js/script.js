@@ -16,7 +16,8 @@ var Memory = {
 			boxes[i].addEventListener('click', function(){
 				Memory.clickFunction(this);
 			}, false);
-		}
+		};
+		Memory.shuffle();
 	},
 
 	clickFunction: function(element) {
@@ -65,6 +66,46 @@ var Memory = {
 
 		// Reset clicks
 		Memory.clicks = 0;
+	},
+	shuffle: function() {
+		var clonedBoxes = [];
+
+		for (var i = Memory.boxes.length - 1; i >= 0; i--) {
+			clonedBoxes.push(Memory.boxes[i]);
+		}
+
+		// console.log(clonedBoxes);
+
+		var memoryWrapper = document.getElementById('memoryWrapper');
+		console.log(memoryWrapper);
+
+		var shuffledBoxes = Memory.suffleCards(clonedBoxes);
+
+		for (var i = shuffledBoxes.length - 1; i >= 0; i--) {
+			memoryWrapper.appendChild(shuffledBoxes[i]);
+		}
+
+		Memory.boxes = [];
+
+		Memory.boxes = shuffledBoxes;
+	},
+	suffleCards: function (array) {
+		var currentIndex = array.length, temporaryValue, randomIndex ;
+
+		// While there remain elements to shuffle...
+		while (0 !== currentIndex) {
+
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex --;
+
+			// And swap it with the current element.
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+
+		return array;
 	}
 
 };
