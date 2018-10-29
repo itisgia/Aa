@@ -128,12 +128,70 @@ footer {
   top: 50%;
   height: 300px;
   width: 550px;
-  margin-top: -150px;
+  margin-top: -196px;
   margin-left: -315px;
   background: #fff;
   border: none;
   z-index: 999;
   padding: 30px 40px 60px 40px; }
+
+.closebutton i {
+  display: block;
+  right: 30px;
+  top: 10px;
+  font-size: 19px; }
+
+.fontwrapper {
+  margin: auto;
+  text-align: center;
+  font-weight: normal;
+  padding-top: 12px;
+  font-size: 48px;
+  line-height: 50px;
+  color: #1a1b1a; }
+
+.msgbx p {
+  font-family: 'Open Sans',Helvetica,sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #8E8E8E;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  margin: auto; }
+
+.winner-text {
+  font-family: 'Open Sans',Helvetica,sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  color: #8E8E8E;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: auto; }
+
+.hit-again-button {
+  display: inline-block;
+  background-color: #e27eb9;
+  padding: 12px 14px 12px 14px;
+  border: none; }
+  .hit-again-button a {
+    font-family: 'Open Sans',helvetica,sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+    text-decoration: none;
+    color: #fff; }
+
+.hit-again-button:hover {
+  text-decoration: none;
+  background-color: #EF75BD; }
+
+.msgbx {
+  display: none; }
 
 @media only screen and (min-width: 600px) {
   header {

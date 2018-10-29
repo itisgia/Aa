@@ -3,6 +3,9 @@ var Memory = {
 
 	clicks: 0,
 	totalClicks: 0,
+	winLimit : 4,
+	points:0,
+
 
 	boxes: document.getElementsByClassName('box'),
 
@@ -43,7 +46,13 @@ var Memory = {
 
 			Memory.clicks ++;
 			Memory.totalClicks ++;
-			console.log(Memory.totalClicks);
+
+			if(Memory.points == Memory.winLimit) {
+
+
+
+			}
+
 
 		}
 
@@ -109,7 +118,18 @@ var Memory = {
 		}
 
 		return array;
+	},
+
+	win: function() {
+
+		var points = document.getElementsByClassName('points');
+		points.item(0).innerHTML = Memory.totalClicks;
+
+		var winBox = document.getElementsByClassName('winbox');
+		console.log(winBox[0]);
+		showBox(winBox[0]);
 	}
+
 
 };
 
