@@ -144,6 +144,20 @@ footer {
 	}
 }
 
+
+.msgbx {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 300px;
+    width: 550px;
+    margin-top: -150px;
+    margin-left: -315px;
+    background: #fff;
+    border: none;
+	z-index: 999;
+	padding: 30px 40px 60px 40px;
+}
 @media only screen and (min-width: 600px) {
 	header {
 		margin-bottom: 3%;
