@@ -2,6 +2,7 @@
 var Memory = {
 
 	clicks: 0,
+	totalClicks: 0,
 
 	boxes: document.getElementsByClassName('box'),
 
@@ -41,6 +42,8 @@ var Memory = {
 			}
 
 			Memory.clicks ++;
+			Memory.totalClicks ++;
+			console.log(Memory.totalClicks);
 
 		}
 
